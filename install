@@ -1,13 +1,17 @@
 #!/bin/sh
 
-# run the script in .emacs.d
-dir=$(basename $(pwd))
-if [ $dir != '.emacs.d' ] ; then
-    echo 'Please run the script in directory .emacs.d'
-    exit
+#backup existing config
+if [ -e ~/.emacs ] ; then
+    mv ~/.emacs ~/.emacs-bak
+fi
+if [ -e ~/.emacs.d ]; then
+    mv ~/.emacs.d ~/.emacs.d-bak
 fi
 
-mkdir -p config
+cp .emacs ~/
+mkdir  ~/.emacs.d
+cp -r install config ~/.emacs.d/
+cd ~/.emacs.d
 
 mkdir -p plugins
 cd plugins
