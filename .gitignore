@@ -1,0 +1,7 @@
+*
+!.gitignore
+!README
+!install
+
+!config
+!config/*.el

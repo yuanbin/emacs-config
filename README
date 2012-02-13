@@ -1,0 +1,4 @@
+How to install
+
+1. cd ~/.emacs.d
+2. ./install

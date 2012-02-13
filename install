@@ -1,0 +1,53 @@
+#!/bin/sh
+
+# run the script in .emacs.d
+dir=$(basename $(pwd))
+if [ $dir != '.emacs.d' ] ; then
+    echo 'Please run the script in directory .emacs.d'
+    exit
+fi
+
+mkdir -p config
+
+mkdir -p plugins
+cd plugins
+
+mkdir -p misc
+cd misc
+
+if [ ! -e "window-numbering.el" ] ; then
+    wget http://nschum.de/src/emacs/window-numbering-mode/window-numbering.el
+fi
+
+if [ ! -e "autopair.el" ] ; then
+    wget http://autopair.googlecode.com/svn/trunk/autopair.el
+fi
+
+if [ ! -e "dired+.el" ] ; then
+    wget http://www.emacswiki.org/emacs/download/dired+.el
+fi
+
+cd ..
+
+mkdir -p color-theme
+cd color-theme
+if [ ! -e "color-theme-6.6.0.tar.gz" ] ; then
+    wget http://download.savannah.gnu.org/releases/color-theme/color-theme-6.6.0.tar.gz
+    tar -xzf color-theme-6.6.0.tar.gz
+fi
+if [ ! -e "color-theme-tangotango" ] ; then
+    git clone https://github.com/juba/color-theme-tangotango.git
+fi
+cd ..
+
+if [ ! -e "yasnippet" ] ; then
+    git clone https://github.com/capitaomorte/yasnippet
+fi
+
+mkdir -p ibus
+cd ibus
+if [ ! -e "ibus-el-0.2.1.tar.gz" ] ; then
+     wget http://launchpad.net/ibus.el/0.2/0.2.1/+download/ibus-el-0.2.1.tar.gz
+     tar -zxf ibus-el-0.2.1.tar.gz
+fi 
+cd ..
