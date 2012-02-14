@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# NOTE: this script will download plugins with specific versions
+# If some package is unavailable at the time you use the script,
+# just find another source and substitute it
+
 curdir=$(basename $(pwd))
 if [ $curdir != ".emacs.d" ] ; then
     echo "Please run install in directory ~/.emacs.d"
@@ -41,7 +45,7 @@ mkdir -pv color-theme
 cd color-theme
 if [ ! -e "color-theme-6.6.0.tar.gz" ] ; then
     wget http://download.savannah.gnu.org/releases/color-theme/color-theme-6.6.0.tar.gz
-    tar -xzf color-theme-6.6.0.tar.gz
+    tar -zxvf color-theme-6.6.0.tar.gz
 fi
 if [ ! -e "color-theme-tangotango" ] ; then
     git clone https://github.com/juba/color-theme-tangotango.git
@@ -56,7 +60,7 @@ mkdir -pv ibus
 cd ibus
 if [ ! -e "ibus-el-0.2.1.tar.gz" ] ; then
      wget http://launchpad.net/ibus.el/0.2/0.2.1/+download/ibus-el-0.2.1.tar.gz
-     tar -zxf ibus-el-0.2.1.tar.gz
+     tar -zvxf ibus-el-0.2.1.tar.gz
 fi 
 cd ..
 
@@ -64,6 +68,17 @@ mkdir -pv cedet
 cd cedet
 if [ ! -e "cedet-1.0.1.tar.gz" ] ; then
     wget http://sourceforge.net/projects/cedet/files/cedet/cedet-1.0.1.tar.gz
-     tar -zxf cedet-1.0.1.tar.gz
+     tar -zvxf cedet-1.0.1.tar.gz
+fi 
+cd ..
+
+mkdir -pv org-mode
+cd org-mode
+if [ ! -e "org-7.8.03.tar.gz" ] ; then
+     wget http://orgmode.org/org-7.8.03.tar.gz
+     tar -zxvf org-7.8.03.tar.gz
+     cd org-7.8.03
+     make
+     cd ..
 fi 
 cd ..
