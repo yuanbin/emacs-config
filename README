@@ -1,3 +1,4 @@
 How to install
 
-./install
+1. Rename directory name to .emacs.d (make necessary backups)
+2. In .emacs.d, run: ./install

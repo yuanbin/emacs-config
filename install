@@ -1,22 +1,22 @@
 #!/bin/sh
 
-#backup existing config
-if [ -e ~/.emacs ] ; then
-    mv ~/.emacs ~/.emacs-bak
-fi
-if [ -e ~/.emacs.d ]; then
-    mv ~/.emacs.d ~/.emacs.d-bak
+curdir=$(basename $(pwd))
+if [ $curdir != ".emacs.d" ] ; then
+    echo "Please run install in directory ~/.emacs.d"
+    exit
 fi
 
-cp .emacs ~/
-mkdir  ~/.emacs.d
-cp -r install config ~/.emacs.d/
+cd ~
+if [ -e ".emacs" ] ; then
+    cp -v .emacs .emacs-bak
+fi
 cd ~/.emacs.d
+cp -v emacs-init ~/.emacs
 
-mkdir -p plugins
+mkdir -pv plugins
 cd plugins
 
-mkdir -p misc
+mkdir -pv misc
 cd misc
 
 if [ ! -e "window-numbering.el" ] ; then
@@ -27,13 +27,17 @@ if [ ! -e "autopair.el" ] ; then
     wget http://autopair.googlecode.com/svn/trunk/autopair.el
 fi
 
+if [ ! -e "linum+.el" ] ; then
+    wget http://www.emacswiki.org/emacs/download/linum+.el
+fi
+
 if [ ! -e "dired+.el" ] ; then
     wget http://www.emacswiki.org/emacs/download/dired+.el
 fi
 
 cd ..
 
-mkdir -p color-theme
+mkdir -pv color-theme
 cd color-theme
 if [ ! -e "color-theme-6.6.0.tar.gz" ] ; then
     wget http://download.savannah.gnu.org/releases/color-theme/color-theme-6.6.0.tar.gz
@@ -48,10 +52,18 @@ if [ ! -e "yasnippet" ] ; then
     git clone https://github.com/capitaomorte/yasnippet
 fi
 
-mkdir -p ibus
+mkdir -pv ibus
 cd ibus
 if [ ! -e "ibus-el-0.2.1.tar.gz" ] ; then
      wget http://launchpad.net/ibus.el/0.2/0.2.1/+download/ibus-el-0.2.1.tar.gz
      tar -zxf ibus-el-0.2.1.tar.gz
+fi 
+cd ..
+
+mkdir -pv cedet
+cd cedet
+if [ ! -e "cedet-1.0.1.tar.gz" ] ; then
+    wget http://sourceforge.net/projects/cedet/files/cedet/cedet-1.0.1.tar.gz
+     tar -zxf cedet-1.0.1.tar.gz
 fi 
 cd ..
