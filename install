@@ -39,6 +39,11 @@ if [ ! -e "dired+.el" ] ; then
     wget http://www.emacswiki.org/emacs/download/dired+.el
 fi
 
+if [ ! -e "xcscope.el" ] ; then
+    wget http://opensource.apple.com/source/cscope/cscope-5/cscope/contrib/xcscope/xcscope.el?txt
+    mv -v xcscope.el?txt xcscope.el
+fi
+
 cd ..
 
 mkdir -pv color-theme
@@ -82,3 +87,5 @@ if [ ! -e "org-7.8.03.tar.gz" ] ; then
      cd ..
 fi 
 cd ..
+
+

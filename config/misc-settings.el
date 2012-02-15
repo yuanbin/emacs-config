@@ -49,7 +49,7 @@
 ;; ===== run the install script to install the plugins ====
 
 ;;font
-(set-default-font "Inconsolata-18")
+(set-default-font "Inconsolata-14")
 
 ;; window-numbering
 (require 'window-numbering)
