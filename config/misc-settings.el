@@ -44,6 +44,9 @@
 (setq track-eol t)    ; 当光标在行尾上下移动的时候，始终保持在行尾。
 
 
+(require 'ido)
+(ido-mode 'both) ;; for buffers and files
+(setq ido-case-fold  t) ; be case-insensitive
 
 ;; ===== the following config requires third party plugins ====
 ;; ===== run the install script to install the plugins ====

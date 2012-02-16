@@ -4,3 +4,8 @@
 (add-hook 'c-mode-common-hook
 	  '(lambda ()
              (require 'xcscope)))
+
+(defun my-cc-mode-common-hook()
+  (setq tab-width 8 indent-tabs-mode nil))
+
+(add-hook 'c-mode-common-hook 'my-cc-mode-common-hook)
