@@ -1,6 +1,11 @@
 ;; ref: http://doc.norang.ca/org-mode.html
 
 (require 'org-install)
+
+(require 'ob-plantuml)
+(setq org-plantuml-jar-path
+      (expand-file-name "~/.emacs.d/plugins/misc/plantuml.jar"))
+
 ;; use org-mode for org, org_archive and txt
 (add-to-list 'auto-mode-alist '("\\.\\(org\\|org_archive\\|txt\\)$" . org-mode))
 

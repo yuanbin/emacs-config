@@ -65,3 +65,7 @@
 ;; linum+
 (require 'linum+)
 (global-linum-mode 1)
+
+;; quick jump
+(require 'quick-jump)
+(quick-jump-default-keybinding)

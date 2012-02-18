@@ -26,10 +26,10 @@
 ;;  Unix Shell, Perl, Pascal, Tcl, Fortran, Asm
 (semantic-load-enable-primary-exuberent-ctags-support)
 
-(defun my-c-mode-cedet-hook ()
- (local-set-key "." 'semantic-complete-self-insert)
- (local-set-key ">" 'semantic-complete-self-insert))
-(add-hook 'c-mode-common-hook 'my-c-mode-cedet-hook)
+;;(defun my-c-mode-cedet-hook ()
+;; (local-set-key "." 'semantic-complete-self-insert)
+;; (local-set-key ">" 'semantic-complete-self-insert))
+;;(add-hook 'c-mode-common-hook 'my-c-mode-cedet-hook)
 
 (require 'semantic-c nil 'noerror)
 

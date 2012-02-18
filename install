@@ -35,6 +35,15 @@ if [ ! -e "linum+.el" ] ; then
     wget http://www.emacswiki.org/emacs/download/linum+.el
 fi
 
+if [ ! -e "quick-jump.el" ] ; then
+    wget http://www.emacswiki.org/emacs/download/quick-jump.el
+fi
+
+if [ ! -e "quick-jump.el" ] ; then
+    wget http://www.emacswiki.org/emacs/download/quick-jump.el
+fi
+
+http://kanis.fr/hg/lisp/org/ob-plantuml.el
 if [ ! -e "dired+.el" ] ; then
     wget http://www.emacswiki.org/emacs/download/dired+.el
 fi
@@ -84,6 +93,10 @@ if [ ! -e "org-7.8.03.tar.gz" ] ; then
      tar -zxvf org-7.8.03.tar.gz
      cd org-7.8.03
      make
+     cd ../../misc
+     if [ ! -e "plantuml.jar" ] ; then
+         wget http://sourceforge.net/projects/plantuml/files/plantuml.jar/
+     fi
      cd ..
 fi 
 cd ..

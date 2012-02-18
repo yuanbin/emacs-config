@@ -6,6 +6,7 @@
              (require 'xcscope)))
 
 (defun my-cc-mode-common-hook()
-  (setq tab-width 8 indent-tabs-mode nil))
+  (setq tab-width 8 indent-tabs-mode nil)
+  (c-set-style "linux"))
 
 (add-hook 'c-mode-common-hook 'my-cc-mode-common-hook)
