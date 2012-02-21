@@ -1,3 +1,5 @@
+;; This is an alternative init file to ~/.emacs
+;;
 ;; directory structure
 ;; .emacs.d
 ;;   |-config (all config files, loaded in .emacs)

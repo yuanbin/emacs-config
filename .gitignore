@@ -2,7 +2,7 @@
 !.gitignore
 !README
 !install
-!emacs-init
+!init.el
 
 !config
 !config/*.el

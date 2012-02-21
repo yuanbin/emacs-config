@@ -20,3 +20,6 @@
 
 ;; view today's agenda by default
 (setq org-agenda-ndays 1)
+
+;; ===== capture confg =====
+ (setq org-default-notes-file (expand-file-name "~/capture.org"))

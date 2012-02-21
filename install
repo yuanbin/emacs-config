@@ -10,13 +10,6 @@ if [ $curdir != ".emacs.d" ] ; then
     exit
 fi
 
-cd ~
-if [ -e ".emacs" ] ; then
-    cp -v .emacs .emacs-bak
-fi
-cd ~/.emacs.d
-cp -v emacs-init ~/.emacs
-
 mkdir -pv plugins
 cd plugins
 
@@ -39,11 +32,6 @@ if [ ! -e "quick-jump.el" ] ; then
     wget http://www.emacswiki.org/emacs/download/quick-jump.el
 fi
 
-if [ ! -e "quick-jump.el" ] ; then
-    wget http://www.emacswiki.org/emacs/download/quick-jump.el
-fi
-
-http://kanis.fr/hg/lisp/org/ob-plantuml.el
 if [ ! -e "dired+.el" ] ; then
     wget http://www.emacswiki.org/emacs/download/dired+.el
 fi

@@ -1,5 +1,9 @@
 ;; ===== Config that can be set with default emacs installation =====
 
+;; do not load system wide init file
+;; ie: /usr/share/emacs/site-lisp/default.el
+(setq inhibit-default-init 1)
+
 ;;start emacs in server mode
 (server-start)
 
@@ -35,7 +39,7 @@
 (fset 'yes-or-no-p 'y-or-n-p)    ; 按 y 或空格键表示 yes，n 表示 no
 (setq x-select-enable-clipboard t) ; 允许emacs和外部其他程序的粘贴
 (auto-image-file-mode t);打开图片显示功能
-(setq frame-title-format '("" buffer-file-name "@emacs" ));在标题栏显示buffer名称
+(setq-default frame-title-format 'buffer-file-name);在标题栏显示buffer名称
 (setq default-directory "~/")     ; 设置打开文件的缺省路径
 (setq-default kill-whole-line t) ; 在行首 C-k 时，同时删除该行
 (setq show-paren-style 'parenthesis) ;括号匹配时可以高亮显示另外一边的括号，但光
