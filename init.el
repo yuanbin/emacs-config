@@ -26,11 +26,13 @@
 ;;(mapc 'load(directory-files "~/.emacs.d/config" t "\.el$"))
 
 ;;load individual config files
-(load "~/.emacs.d/config/misc-settings")
 (load "~/.emacs.d/config/color-theme-settings")
-(load "~/.emacs.d/config/keyboard-settings")
 (load "~/.emacs.d/config/yasnippet-settings")
 (load "~/.emacs.d/config/ibus-settings")
 (load "~/.emacs.d/config/cc-mode-settings")
 (load "~/.emacs.d/config/cedet-settings")
 (load "~/.emacs.d/config/org-mode-settings")
+
+;; put these two config last, will overwrite some previous configs
+(load "~/.emacs.d/config/misc-settings")
+(load "~/.emacs.d/config/keyboard-settings")

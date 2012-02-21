@@ -1,0 +1,11 @@
+--- plugins/color-theme/color-theme-tangotango/color-theme-tangotango.el	2012-02-21 13:16:21.783607156 -0800
++++ my-color-theme-tangotango.el	2012-02-21 13:18:55.089217099 -0800
+@@ -50,7 +50,7 @@
+   (interactive)
+   (color-theme-install
+    '(color-theme-tangotango
+-     ((background-color . "#2e3434")
++     ((background-color . "#000000")
+       (background-mode . dark)
+       (border-color . "#888a85")
+       (foreground-color . "#eeeeec")

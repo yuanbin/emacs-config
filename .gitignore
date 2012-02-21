@@ -1,4 +1,5 @@
 *
+
 !.gitignore
 !README
 !install
@@ -6,3 +7,6 @@
 
 !config
 !config/*.el
+
+!patch
+!patch/*.patch

@@ -1,4 +1,12 @@
-How to install
+-*- mode:org -*-
+
+* How to install
 
 1. Rename directory name to .emacs.d (make necessary backups)
 2. In .emacs.d, run: ./install
+
+* About patches
+
+The directory patch/ contains patches that are tailored for my own preference
+(key bindings, color, etc). If you don't want to apply these patches, just set
+the 'doPatch' variable to anything else except 'y' in the install script.

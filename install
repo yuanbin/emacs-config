@@ -89,4 +89,11 @@ if [ ! -e "org-7.8.03.tar.gz" ] ; then
 fi 
 cd ..
 
+cd .. # now in ~/.emacs.d/
 
+# set patch to null string if you don't want to apply patch
+doPatch="y"
+if [ $doPatch == "y" ] ; then
+    patch -p0 < ./patch/xcscope.patch
+    patch -p0 < ./patch/color-theme-tangotango.patch
+fi
