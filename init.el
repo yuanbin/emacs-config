@@ -1,4 +1,6 @@
 ;; This is an alternative init file to ~/.emacs
+;; Please ensure that ~/.emacs does not exist on your system, otherwise, it will
+;; be read as the init file by emacs instead of this file 
 ;;
 ;; directory structure
 ;; .emacs.d
@@ -33,6 +35,7 @@
 (load "~/.emacs.d/config/cc-mode-settings")
 (load "~/.emacs.d/config/cedet-settings")
 (load "~/.emacs.d/config/org-mode-settings")
+(load "~/.emacs.d/config/auctex-settings")
 
 ;; put these two config last, will overwrite some previous configs
 (load "~/.emacs.d/config/misc-settings")

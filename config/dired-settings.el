@@ -3,6 +3,7 @@
 (require 'dired-x)               ; 有些特殊的功能
 (require 'dired+)
 (global-set-key "\C-x\C-j" 'dired-jump) ; 通过 C-x C-j 跳转到当前目录的 Dired
+(toggle-diredp-find-file-reuse-dir 1) ; reuse buffer when opening new dirs
 
 ;; disable console output if opened at background
 (defadvice dired-run-shell-command (around kid-dired-run-shell-command (command))
