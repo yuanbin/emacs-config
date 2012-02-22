@@ -29,6 +29,7 @@
 (load "~/.emacs.d/config/color-theme-settings")
 (load "~/.emacs.d/config/yasnippet-settings")
 (load "~/.emacs.d/config/ibus-settings")
+(load "~/.emacs.d/config/dired-settings")
 (load "~/.emacs.d/config/cc-mode-settings")
 (load "~/.emacs.d/config/cedet-settings")
 (load "~/.emacs.d/config/org-mode-settings")

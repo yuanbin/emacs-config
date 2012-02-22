@@ -1,31 +1,18 @@
---- plugins/misc/xcscope.el	2002-01-09 10:50:30.000000000 -0800
-+++ my-xcscope.el	2012-02-21 11:56:33.967650153 -0800
-@@ -995,14 +995,22 @@
-   "The cscope keymap.")
- (if cscope:map
-     nil
--  (setq cscope:map (make-sparse-keymap))
--  (define-key cscope:map "\C-css" 'cscope-find-this-symbol)
--  (define-key cscope:map "\C-csd" 'cscope-find-global-definition)
-+  ;;(setq cscope:map (make-sparse-keymap))
-+  ;; overwrite key bindings, use C-' as prefix key, since it's easier to press :)
-+  (define-prefix-command 'cscope:map)
-+  (global-set-key (kbd "C-'") 'cscope:map)
-+  ;;(define-key cscope:map "\C-css" 'cscope-find-this-symbol)
-+  (define-key cscope:map (kbd "s") 'cscope-find-this-symbol)
-+  ;;(define-key cscope:map "\C-csd" 'cscope-find-global-definition)
-+  (define-key cscope:map (kbd "d") 'cscope-find-global-definition)
-   (define-key cscope:map "\C-csg" 'cscope-find-global-definition)
--  (define-key cscope:map "\C-csc" 'cscope-find-functions-calling-this-function)
--  (define-key cscope:map "\C-csC" 'cscope-find-called-functions)
-+  ;;(define-key cscope:map "\C-csc" 'cscope-find-functions-calling-this-function)
-+  (define-key cscope:map (kbd "c") 'cscope-find-functions-calling-this-function)
-+  ;;(define-key cscope:map "\C-csC" 'cscope-find-called-functions)
-+  (define-key cscope:map (kbd "C") 'cscope-find-called-functions)
-   (define-key cscope:map "\C-cst" 'cscope-find-this-text-string)
--  (define-key cscope:map "\C-cse" 'cscope-find-egrep-pattern)
-+  ;;(define-key cscope:map "\C-cse" 'cscope-find-egrep-pattern)
-+  (define-key cscope:map (kbd "e") 'cscope-find-egrep-pattern)
-   (define-key cscope:map "\C-csf" 'cscope-find-this-file)
-   (define-key cscope:map "\C-csi" 'cscope-find-files-including-file)
-   ;;
+--- plugins/misc/xcscope.el	2012-02-21 17:25:46.641046893 -0800
++++ my-xcscope.el	2012-02-21 17:24:07.473601528 -0800
+@@ -1014,6 +1014,15 @@
+   (define-key cscope:map "\C-csT" 'cscope-tell-user-about-directory)
+   (define-key cscope:map "\C-csD" 'cscope-dired-directory))
+ 
++;; add another bindling, using \C-; as prefix key
++(define-prefix-command 'my-cscope-map)
++(global-set-key (kbd "C-;") 'my-cscope-map)
++(define-key my-cscope-map (kbd "s") 'cscope-find-this-symbol)
++(define-key my-cscope-map (kbd "d") 'cscope-find-global-definition)
++(define-key my-cscope-map (kbd "c") 'cscope-find-functions-calling-this-function)
++(define-key my-cscope-map (kbd "C") 'cscope-find-called-functions)
++(define-key my-cscope-map (kbd "e") 'cscope-find-egrep-pattern)
++
+ (easy-menu-define cscope:menu
+ 		  (list cscope:map cscope-list-entry-keymap)
+ 		  "cscope menu"
