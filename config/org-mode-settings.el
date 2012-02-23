@@ -12,6 +12,14 @@
 ;; flyspell mode for spell checking everywhere
 (add-hook 'org-mode-hook 'turn-on-flyspell 'append)
 
+;; Make TAB the yas trigger key in the org-mode-hook
+(add-hook 'org-mode-hook
+          (lambda ()
+            ;; yasnippet
+            (make-variable-buffer-local 'yas/trigger-key)
+            (org-set-local 'yas/trigger-key [tab])
+            (define-key yas/keymap [tab] 'yas/next-field-group)))
+
 ;; enable clean view
 (setq org-startup-indented t)
 

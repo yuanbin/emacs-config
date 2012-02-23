@@ -36,6 +36,9 @@
 ;; autocomplete when idle
 ;; (setq global-semantic-idle-completions-mode t)
 
+;; trigger complete
+(define-key c-mode-base-map (kbd "M-n") 'semantic-ia-complete-symbol-menu)
+
 ;; ========== EDE ==========
 (global-ede-mode t)
 
