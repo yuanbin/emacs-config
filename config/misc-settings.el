@@ -52,6 +52,10 @@
 (ido-mode 'both) ;; for buffers and files
 (setq ido-case-fold  t) ; be case-insensitive
 
+(require 'uniquify) ; uniquify buffer name
+(setq uniquify-buffer-name-style 'forward)
+
+
 ;; ===== the following config requires third party plugins ====
 ;; ===== run the install script to install the plugins ====
 

@@ -1,8 +1,8 @@
---- plugins/misc/xcscope.el	2012-02-21 17:25:46.641046893 -0800
-+++ my-xcscope.el	2012-02-21 17:24:07.473601528 -0800
-@@ -1014,6 +1014,15 @@
-   (define-key cscope:map "\C-csT" 'cscope-tell-user-about-directory)
+--- plugins/misc/xcscope.el	2012-02-22 10:37:17.069268094 -0800
++++ my-xcscope.el	2012-02-22 10:41:05.769583344 -0800
+@@ -1146,6 +1146,16 @@
    (define-key cscope:map "\C-csD" 'cscope-dired-directory))
+   ;; The previous line corresponds to be end of the "Cscope" menu.
  
 +;; add another bindling, using \C-; as prefix key
 +(define-prefix-command 'my-cscope-map)
@@ -12,6 +12,7 @@
 +(define-key my-cscope-map (kbd "c") 'cscope-find-functions-calling-this-function)
 +(define-key my-cscope-map (kbd "C") 'cscope-find-called-functions)
 +(define-key my-cscope-map (kbd "e") 'cscope-find-egrep-pattern)
++(define-key my-cscope-map (kbd "u") 'cscope-pop-mark)
 +
  (easy-menu-define cscope:menu
  		  (list cscope:map cscope-list-entry-keymap)

@@ -33,6 +33,9 @@
 
 (require 'semantic-c nil 'noerror)
 
+;; autocomplete when idle
+;; (setq global-semantic-idle-completions-mode t)
+
 ;; ========== EDE ==========
 (global-ede-mode t)
 

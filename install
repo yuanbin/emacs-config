@@ -37,8 +37,7 @@ if [ ! -e "dired+.el" ] ; then
 fi
 
 if [ ! -e "xcscope.el" ] ; then
-    wget http://opensource.apple.com/source/cscope/cscope-5/cscope/contrib/xcscope/xcscope.el?txt
-    mv -v xcscope.el?txt xcscope.el
+    wget http://inst.eecs.berkeley.edu/~cs186/fa05/debugging/xcscope.el
 fi
 
 cd ..
@@ -100,6 +99,17 @@ if [ ! -e "auctex-11.86.tar.gz" ] ; then
     cd auctex-11.86
     ./configure
     make
+    cd ..
+fi
+cd ..
+
+mkdir -pv auto-complete
+cd auto-complete
+if [ ! -e "auto-complete-1.3.1.tar.bz2" ] ; then
+    wget http://cx4a.org/pub/auto-complete/auto-complete-1.3.1.tar.bz2
+    tar -jxvf auto-complete-1.3.1.tar.bz2
+    cd auto-complete-1.3.1
+    make byte-compile
     cd ..
 fi
 cd ..
