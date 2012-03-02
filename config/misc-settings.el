@@ -24,7 +24,7 @@
 ;; (menu-bar-mode -1)
 
 ;; turn on auto-fill-mode for all major modes
-(setq-default default-fill-column 80)
+(setq-default default-fill-column 120)
 (setq-default auto-fill-function 'do-auto-fill)
 ;;(setq auto-fill-mode 1)
 
@@ -35,18 +35,18 @@
 (line-number-mode 1)
 (column-number-mode 1)
 
-(setq mouse-avoidance-mode 'animate) ;光标靠近鼠标指针时，让鼠标指针自动让开，别挡住视线。
-(fset 'yes-or-no-p 'y-or-n-p)    ; 按 y 或空格键表示 yes，n 表示 no
-(setq x-select-enable-clipboard t) ; 允许emacs和外部其他程序的粘贴
-(auto-image-file-mode t);打开图片显示功能
-(setq-default frame-title-format 'buffer-file-name);在标题栏显示buffer名称
-(setq default-directory "~/")     ; 设置打开文件的缺省路径
-(setq-default kill-whole-line t) ; 在行首 C-k 时，同时删除该行
-(setq show-paren-style 'parenthesis) ;括号匹配时可以高亮显示另外一边的括号，但光
-                                     ;标不会烦人的跳到另一个括号处。
-(setq auto-image-file-mode t) ;让 Emacs 可以直接打开和显示图片
-(setq track-eol t)    ; 当光标在行尾上下移动的时候，始终保持在行尾。
+;; enable narrowing
+(put 'narrow-to-region 'disabled nil)
 
+(setq mouse-avoidance-mode 'animate) 
+(fset 'yes-or-no-p 'y-or-n-p)
+(setq x-select-enable-clipboard t) ; enable system clipboard
+(setq-default frame-title-format 'buffer-file-name)
+(setq default-directory "~/")
+(setq-default kill-whole-line t)
+(setq show-paren-style 'parenthesis)
+(setq auto-image-file-mode t)
+(setq track-eol t)
 
 (require 'ido)
 (ido-mode 'both) ;; for buffers and files
@@ -68,7 +68,7 @@
 
 ;; enable autopair in all buffers 
 (require 'autopair)
-(autopair-global-mode) 
+(autopair-global-mode t) 
 
 ;; linum+
 (require 'linum+)
@@ -77,3 +77,7 @@
 ;; quick jump
 (require 'quick-jump)
 (quick-jump-default-keybinding)
+
+(require 'hideshow-org)
+(add-hook 'c-mode-hook 'hs-org/minor-mode)
+(add-hook 'c++-mode-hook 'hs-org/minor-mode)

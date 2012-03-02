@@ -34,6 +34,7 @@
 (load "~/.emacs.d/config/dired-settings")
 (load "~/.emacs.d/config/cc-mode-settings")
 (load "~/.emacs.d/config/cedet-settings")
+(load "~/.emacs.d/config/ecb-settings")
 (load "~/.emacs.d/config/org-mode-settings")
 (load "~/.emacs.d/config/auctex-settings")
 (load "~/.emacs.d/config/auto-complete-settings")
@@ -41,3 +42,15 @@
 ;; put these two config last, will overwrite some previous configs
 (load "~/.emacs.d/config/misc-settings")
 (load "~/.emacs.d/config/keyboard-settings")
+(custom-set-variables
+  ;; custom-set-variables was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ '(ecb-options-version "2.40"))
+(custom-set-faces
+  ;; custom-set-faces was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ )
