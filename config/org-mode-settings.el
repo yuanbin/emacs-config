@@ -29,5 +29,12 @@
 ;; view today's agenda by default
 (setq org-agenda-ndays 1)
 
+;; add 'NEXT' keyword except for the default 'TODO' and 'DONE'
+(setq org-todo-keywords
+       '((sequence "TODO" "NEXT" "DONE")))
+
+(setq org-todo-keyword-faces
+      '(("NEXT"  . (:foreground "SlateBlue" :weight bold))))
+
 ;; ===== capture confg =====
  (setq org-default-notes-file (expand-file-name "~/capture.org"))

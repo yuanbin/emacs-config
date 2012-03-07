@@ -130,7 +130,7 @@ cd ..
 cd .. # now in ~/.emacs.d/
 
 # set patch to null string if you don't want to apply patch
-doPatch="y"
+doPatch="n"
 if [ $doPatch = y ] ; then
     patch -p0 < ./patch/xcscope.patch
     patch -p0 < ./patch/color-theme-tangotango.patch

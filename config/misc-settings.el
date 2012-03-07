@@ -55,6 +55,8 @@
 (require 'uniquify) ; uniquify buffer name
 (setq uniquify-buffer-name-style 'forward)
 
+(require 'tramp)
+(setq tramp-default-method "ssh")
 
 ;; ===== the following config requires third party plugins ====
 ;; ===== run the install script to install the plugins ====
