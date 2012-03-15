@@ -42,6 +42,19 @@ fi
 
 cd ..
 
+mkdir -pv zjl-hl #extended c/c++/elisp highlights
+cd zjl-hl
+if [ ! -e "zjl-hl.el" ] ; then
+    wget http://www.emacswiki.org/emacs/download/zjl-hl.el
+fi
+if [ ! -e "highlight.el" ] ; then
+    wget http://www.emacswiki.org/emacs/download/highlight.el
+fi
+if [ ! -e "region-list-edit.el" ] ; then
+    wget http://www.emacswiki.org/emacs/download/region-list-edit.el
+fi
+cd ..
+
 mkdir -pv color-theme
 cd color-theme
 if [ ! -e "color-theme-6.6.0.tar.gz" ] ; then
@@ -129,9 +142,10 @@ cd ..
 
 cd .. # now in ~/.emacs.d/
 
-# set patch to null string if you don't want to apply patch
+# set patch to "y" if you want to apply patch
 doPatch="n"
 if [ $doPatch = y ] ; then
     patch -p0 < ./patch/xcscope.patch
     patch -p0 < ./patch/color-theme-tangotango.patch
+    patch -p0 < ./patch/zjl-hl.patch
 fi

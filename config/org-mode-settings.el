@@ -34,7 +34,7 @@
        '((sequence "TODO" "NEXT" "DONE")))
 
 (setq org-todo-keyword-faces
-      '(("NEXT"  . (:foreground "SlateBlue" :weight bold))))
+      '(("NEXT"  . (:foreground "deeppink" :weight bold))))
 
 ;; ===== capture confg =====
  (setq org-default-notes-file (expand-file-name "~/capture.org"))

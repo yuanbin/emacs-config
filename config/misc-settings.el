@@ -6,9 +6,13 @@
 
 ;;start emacs in server mode
 (server-start)
+;; use tcp instead of default unix socket
+(setq server-use-tcp t)
 
 ;; no blinking
 (blink-cursor-mode -1) 
+(setq-default cursor-type 'bar)
+(set-cursor-color "deeppink") 
 
 ;; show parenthesis
 (show-paren-mode 1)
@@ -41,7 +45,8 @@
 (setq mouse-avoidance-mode 'animate) 
 (fset 'yes-or-no-p 'y-or-n-p)
 (setq x-select-enable-clipboard t) ; enable system clipboard
-(setq-default frame-title-format 'buffer-file-name)
+;;(setq frame-title-format 'buffer-file-name)
+(setq frame-title-format (concat buffer-file-name "@" server-name))
 (setq default-directory "~/")
 (setq-default kill-whole-line t)
 (setq show-paren-style 'parenthesis)
@@ -60,6 +65,10 @@
 
 ;; ===== the following config requires third party plugins ====
 ;; ===== run the install script to install the plugins ====
+
+;; extended c/c++/elisp highlights
+(require 'zjl-hl)
+(zjl-hl-enable-global-all-modes)
 
 ;;font
 (set-default-font "Inconsolata-14")
