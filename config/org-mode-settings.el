@@ -29,6 +29,10 @@
 ;; view today's agenda by default
 (setq org-agenda-ndays 1)
 
+;; open link in firefox
+(setq browse-url-browser-function 'browse-url-generic
+      browse-url-generic-program "firefox")
+
 ;; add 'NEXT' keyword except for the default 'TODO' and 'DONE'
 (setq org-todo-keywords
        '((sequence "TODO" "NEXT" "DONE")))

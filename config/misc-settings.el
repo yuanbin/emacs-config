@@ -45,8 +45,8 @@
 (setq mouse-avoidance-mode 'animate) 
 (fset 'yes-or-no-p 'y-or-n-p)
 (setq x-select-enable-clipboard t) ; enable system clipboard
-;;(setq frame-title-format 'buffer-file-name)
-(setq frame-title-format (concat buffer-file-name "@" server-name))
+(setq frame-title-format '("" buffer-file-name "@" server-name))
+;; (setq frame-title-format (concat buffer-file-name "@" server-name))
 (setq default-directory "~/")
 (setq-default kill-whole-line t)
 (setq show-paren-style 'parenthesis)
