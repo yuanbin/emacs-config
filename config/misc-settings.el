@@ -80,6 +80,8 @@
 ;; enable autopair in all buffers 
 (require 'autopair)
 (autopair-global-mode t) 
+;; conflict between autopair and graphviz mode, so disable it for now
+(set-default 'autopair-dont-activate #'(lambda () (eq major-mode 'graphviz-dot-mode)))
 
 ;; linum+
 (require 'linum+)

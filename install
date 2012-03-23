@@ -24,6 +24,10 @@ if [ ! -e "autopair.el" ] ; then
     wget http://autopair.googlecode.com/svn/trunk/autopair.el
 fi
 
+if [ ! -e "graphviz-dot-mode.el" ] ; then
+    wget http://users.skynet.be/ppareit/projects/graphviz-dot-mode/graphviz-dot-mode.el
+fi
+
 if [ ! -e "linum+.el" ] ; then
     wget http://www.emacswiki.org/emacs/download/linum+.el
 fi
