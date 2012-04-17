@@ -109,8 +109,7 @@ if (! -e "org-7.8.03.tar.gz") {
   if (! -e "plantuml.jar") {
     system("wget http://sourceforge.net/projects/plantuml/files/plantuml.jar/");
   }
-  chdir("-");
-  chdir("..");
+  chdir("../org-mode");
 }
 chdir("..");
 
@@ -134,7 +133,7 @@ system("mkdir -pv auto-complete");
 chdir("auto-complete");
 if (! -e "auto-complete-1.3.1.tar.bz2") {
   system("wget http://cx4a.org/pub/auto-complete/auto-complete-1.3.1.tar.bz2");
-  system("tar -zvxf auto-complete-1.3.1.tar.bz2");
+  system("tar -jvxf auto-complete-1.3.1.tar.bz2");
   chdir("auto-complete-1.3.1");
   system("make byte-compile");
   chdir("..");
