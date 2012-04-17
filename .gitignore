@@ -3,6 +3,7 @@
 !.gitignore
 !README
 !install
+!install.pl
 !init.el
 
 !config

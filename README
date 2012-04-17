@@ -3,7 +3,7 @@
 * How to install
 
 1. Rename directory name to .emacs.d (make necessary backups)
-2. In .emacs.d, run: ./install
+2. In .emacs.d, run: ./install.pl (./install is deprecated)
 
 * About patches
 

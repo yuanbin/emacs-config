@@ -44,6 +44,10 @@ if [ ! -e "xcscope.el" ] ; then
     wget http://inst.eecs.berkeley.edu/~cs186/fa05/debugging/xcscope.el
 fi
 
+if [ ! -e "quack.el" ] ; then
+    wget http://www.neilvandyke.org/quack/quack.el
+fi
+
 cd ..
 
 mkdir -pv zjl-hl #extended c/c++/elisp highlights
@@ -58,6 +62,7 @@ if [ ! -e "region-list-edit.el" ] ; then
     wget http://www.emacswiki.org/emacs/download/region-list-edit.el
 fi
 cd ..
+
 
 mkdir -pv color-theme
 cd color-theme
@@ -95,7 +100,7 @@ cd ..
 
 mkdir -pv ecb
 cd ecb
-if [ ! -e ecb-2.40.tar.gz ] ; then
+if [ ! -e "ecb-2.40.tar.gz" ] ; then
     wget http://sourceforge.net/projects/ecb/files/ecb/ECB%202.40/ecb-2.40.tar.gz
     tar -zvxf ecb-2.40.tar.gz
 fi
