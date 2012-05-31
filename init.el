@@ -28,18 +28,21 @@
 ;;(mapc 'load(directory-files "~/.emacs.d/config" t "\.el$"))
 
 ;;load individual config files
+(load "~/.emacs.d/config/my-func-settings")
 (load "~/.emacs.d/config/color-theme-settings")
 (load "~/.emacs.d/config/yasnippet-settings")
-(load "~/.emacs.d/config/ibus-settings")
+;;(load "~/.emacs.d/config/ibus-settings")
 (load "~/.emacs.d/config/dired-settings")
 (load "~/.emacs.d/config/cc-mode-settings")
 (load "~/.emacs.d/config/scheme-mode-settings")
+(load "~/.emacs.d/config/slime-settings")
 (load "~/.emacs.d/config/perl-mode-settings")
 (load "~/.emacs.d/config/cedet-settings")
 (load "~/.emacs.d/config/ecb-settings")
 (load "~/.emacs.d/config/org-mode-settings")
 (load "~/.emacs.d/config/auctex-settings")
 (load "~/.emacs.d/config/auto-complete-settings")
+(load "~/.emacs.d/config/doxymacs-settings")
 
 ;; put these two config last, will overwrite some previous configs
 (load "~/.emacs.d/config/misc-settings")

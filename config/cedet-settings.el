@@ -18,9 +18,9 @@
 (global-semanticdb-minor-mode 1)
 
 ;; if you want to enable support for gnu global
-(require 'semanticdb-global)
-(semanticdb-enable-gnu-global-databases 'c-mode)
-(semanticdb-enable-gnu-global-databases 'c++-mode)
+;;(require 'semanticdb-global)
+;;(semanticdb-enable-gnu-global-databases 'c-mode)
+;;(semanticdb-enable-gnu-global-databases 'c++-mode)
 
 ;; enable ctags for some languages:
 ;;  Unix Shell, Perl, Pascal, Tcl, Fortran, Asm

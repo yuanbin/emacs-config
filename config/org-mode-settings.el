@@ -35,10 +35,12 @@
 
 ;; add 'NEXT' keyword except for the default 'TODO' and 'DONE'
 (setq org-todo-keywords
-       '((sequence "TODO" "NEXT" "DONE")))
+       '((sequence "TODO" "NEXT" "DONE" "CANCELED")))
 
 (setq org-todo-keyword-faces
-      '(("NEXT"  . (:foreground "deeppink" :weight bold))))
+      '(("NEXT"  . (:foreground "deeppink" :weight bold))
+        ("DONE"  . (:foreground "aquamarine4" :weight bold))
+        ("CANCELED"  . (:foreground "purple" :weight bold))))
 
 ;; ===== capture confg =====
  (setq org-default-notes-file (expand-file-name "~/capture.org"))

@@ -80,8 +80,9 @@
 ;; enable autopair in all buffers 
 (require 'autopair)
 (autopair-global-mode t) 
-;; conflict between autopair and graphviz mode, so disable it for now
+;; conflict between autopair and graphviz/slime mode, so disable it for now
 (set-default 'autopair-dont-activate #'(lambda () (eq major-mode 'graphviz-dot-mode)))
+(add-hook 'sldb-mode-hook #'(lambda () (setq autopair-dont-activate t)))
 
 ;; linum+
 (require 'linum+)
@@ -94,3 +95,15 @@
 (require 'hideshow-org)
 (add-hook 'c-mode-hook 'hs-org/minor-mode)
 (add-hook 'c++-mode-hook 'hs-org/minor-mode)
+
+;; log4j
+(autoload 'log4j-mode "log4j-mode" "Major mode for viewing log files." t)
+(add-to-list 'auto-mode-alist '("\\.log\\'" . log4j-mode))
+
+;; workgroups
+(require 'workgroups)
+(workgroups-mode 1)
+(setq wg-prefix-key (kbd "C-c w"))
+(setq wg-morph-hsteps 35)
+(setq wg-morph-vsteps 35)
+(wg-load "~/.emacs.d/wg-save/wg-save")

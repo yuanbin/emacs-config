@@ -117,6 +117,38 @@ if (! -e "hideshow-org") {
   system("git clone git://github.com/secelis/hideshow-org.git");
 }
 
+if (! -e "workgroups") {
+  system("git clone git://github.com/tlh/workgroups.el workgroups");
+}
+
+chdir("misc");
+if (! -e "log4j-mode-1.3.zip") {
+  system("wget http://sourceforge.net/projects/log4j-mode/files/latest/download");
+  system("unzip log4j-mode-1.3.zip");
+}
+chdir("..");
+
+system("mkdir -pv slime");
+chdir("slime");
+if (! -e "slime-current.tgz") {
+  system("wget http://common-lisp.net/project/slime/snapshots/slime-current.tgz");
+  system("tar -zvxf slime-current.tgz");
+}
+chdir("..");
+
+
+system("mkdir -pv doxymacs");
+chdir("doxymacs");
+if (! -e "doxymacs-1.8.0.tar.gz") {
+  system("wget http://sourceforge.net/projects/doxymacs/files/doxymacs/1.8.0/doxymacs-1.8.0.tar.gz");
+  system("tar -zvxf doxymacs-1.8.0.tar.gz");
+  chdir("doxymacs-1.8.0");
+  system("./configure");
+  system("make");
+  chdir("..");
+}
+chdir("..");
+
 system("mkdir -pv auctex");
 chdir("auctex");
 if (! -e "auctex-11.86.tar.gz") {
