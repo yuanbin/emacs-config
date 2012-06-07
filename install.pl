@@ -119,6 +119,9 @@ if (! -e "hideshow-org") {
 
 if (! -e "workgroups") {
   system("git clone git://github.com/tlh/workgroups.el workgroups");
+  if (! -e "../wg-save") {
+          system("touch ../wg-save")
+  }
 }
 
 chdir("misc");

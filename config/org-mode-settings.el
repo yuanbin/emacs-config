@@ -35,10 +35,11 @@
 
 ;; add 'NEXT' keyword except for the default 'TODO' and 'DONE'
 (setq org-todo-keywords
-       '((sequence "TODO" "NEXT" "DONE" "CANCELED")))
+       '((sequence "TODO" "NEXT" "DONE" "DELAYED" "CANCELED")))
 
 (setq org-todo-keyword-faces
       '(("NEXT"  . (:foreground "deeppink" :weight bold))
+        ("DELAYED"  . (:foreground "orchid" :weight bold))
         ("DONE"  . (:foreground "aquamarine4" :weight bold))
         ("CANCELED"  . (:foreground "purple" :weight bold))))
 
