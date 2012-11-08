@@ -30,7 +30,8 @@ chdir("misc");
              "http://inst.eecs.berkeley.edu/~cs186/fa05/debugging/xcscope.el",
              "http://www.cmake.org/CMakeDocs/cmake-mode.el",
              "http://jblevins.org/projects/markdown-mode/markdown-mode.el",
-             "http://www.neilvandyke.org/quack/quack.el"
+             "http://www.neilvandyke.org/quack/quack.el",
+             "http://www.dr-qubit.org/download.php?file=undo-tree/undo-tree.el"
             );
 
 foreach $path (@pkg_misc) {

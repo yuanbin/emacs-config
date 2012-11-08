@@ -1,3 +1,3 @@
-(setq inferior-lisp-program "/usr/bin/sbcl") ; your Lisp system
+(setq inferior-lisp-program "/usr/bin/sbcl") 
 (require 'slime)
 (slime-setup '(slime-fancy))
