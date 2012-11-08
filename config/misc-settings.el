@@ -107,3 +107,16 @@
 (setq wg-morph-hsteps 25)
 (setq wg-morph-vsteps 25)
 (wg-load "~/.emacs.d/wg-save")
+
+;; cmake
+(require 'cmake-mode)
+(setq auto-mode-alist
+      (append '(("CMakeLists\\.txt\\'" . cmake-mode)
+                ("\\.cmake\\'" . cmake-mode))
+              auto-mode-alist))
+
+
+(autoload 'markdown-mode "markdown-mode.el" 
+  "Major mode for editing Markdown files" t) 
+(setq auto-mode-alist 
+      (cons '("\\.md" . markdown-mode) auto-mode-alist))

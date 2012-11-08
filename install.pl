@@ -28,6 +28,8 @@ chdir("misc");
              "http://www.emacswiki.org/emacs/download/quick-jump.el",
              "http://www.emacswiki.org/emacs/download/dired+.el",
              "http://inst.eecs.berkeley.edu/~cs186/fa05/debugging/xcscope.el",
+             "http://www.cmake.org/CMakeDocs/cmake-mode.el",
+             "http://jblevins.org/projects/markdown-mode/markdown-mode.el",
              "http://www.neilvandyke.org/quack/quack.el"
             );
 
