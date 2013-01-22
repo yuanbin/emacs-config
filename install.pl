@@ -74,6 +74,13 @@ if (! -e "yasnippet") {
   system("git clone https://github.com/capitaomorte/yasnippet");
 }
 
+if (! -e "magit") {
+  system("git clone git@github.com:magit/magit.git");
+  chdir("magit");
+  system("make");
+  chdir("..");
+}
+
 system("mkdir -pv ibus");
 chdir("ibus");
 if (! -e "ibus-el-0.2.1.tar.gz") {

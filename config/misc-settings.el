@@ -124,3 +124,7 @@
 ;; undo-tree
 (require 'undo-tree)
 (global-undo-tree-mode)
+
+;; magit
+(require 'magit)
+(require 'magit-svn)
