@@ -31,7 +31,7 @@ chdir("misc");
              "http://www.cmake.org/CMakeDocs/cmake-mode.el",
              "http://jblevins.org/projects/markdown-mode/markdown-mode.el",
              "http://www.neilvandyke.org/quack/quack.el",
-             "http://www.dr-qubit.org/download.php?file=undo-tree/undo-tree.el"
+             "http://www.dr-qubit.org/undo-tree/undo-tree.el"
             );
 
 foreach $path (@pkg_misc) {
@@ -136,7 +136,7 @@ if (! -e "workgroups") {
 
 chdir("misc");
 if (! -e "log4j-mode-1.3.zip") {
-  system("wget http://sourceforge.net/projects/log4j-mode/files/latest/download");
+  system("wget http://sourceforge.net/projects/log4j-mode/files/log4j-mode/1.3/log4j-mode-1.3.zip");
   system("unzip log4j-mode-1.3.zip");
 }
 chdir("..");
