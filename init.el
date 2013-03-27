@@ -40,7 +40,7 @@
 (load "~/.emacs.d/config/cedet-settings")
 (load "~/.emacs.d/config/ecb-settings")
 (load "~/.emacs.d/config/org-mode-settings")
-(load "~/.emacs.d/config/auctex-settings")
+;(load "~/.emacs.d/config/auctex-settings")
 (load "~/.emacs.d/config/auto-complete-settings")
 (load "~/.emacs.d/config/doxymacs-settings")
 

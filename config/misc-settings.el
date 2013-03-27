@@ -71,7 +71,7 @@
 (zjl-hl-enable-global-all-modes)
 
 ;;font
-(set-default-font "Inconsolata-14")
+(set-default-font "Inconsolata-16")
 
 ;; window-numbering
 (require 'window-numbering)
