@@ -74,6 +74,10 @@ if (! -e "yasnippet") {
   system("git clone https://github.com/capitaomorte/yasnippet");
 }
 
+if (! -e "lua-mode") {
+  system("git clone git://github.com/immerrr/lua-mode.git");
+}
+
 if (! -e "magit") {
   system("git clone https://github.com/magit/magit.git");
   chdir("magit");

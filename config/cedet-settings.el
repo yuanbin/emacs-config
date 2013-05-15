@@ -31,7 +31,7 @@
 ;; (local-set-key ">" 'semantic-complete-self-insert))
 ;;(add-hook 'c-mode-common-hook 'my-c-mode-cedet-hook)
 
-(require 'semantic-c nil 'noerror)
+;;(require 'semantic-c nil 'noerror)
 
 ;; autocomplete when idle
 ;; (setq global-semantic-idle-completions-mode t)
