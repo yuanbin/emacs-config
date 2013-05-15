@@ -97,8 +97,8 @@ system("mkdir -pv cedet");
 chdir("cedet");
 if (! -e "cedet-1.1.tar.gz") {
   system("wget http://sourceforge.net/projects/cedet/files/cedet/cedet-1.1.tar.gz");
-  system("tar -zvxf cedet-1.0.1.tar.gz");
-  chdir("cedet-1.0.1");
+  system("tar -zvxf cedet-1.1.tar.gz");
+  chdir("cedet-1.1");
   system("make");
   chdir("..");
 }
